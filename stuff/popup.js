@@ -1,24 +1,11 @@
-<!DOCTYPE html>
-  <html>
-    <head>
-      <style>
-      body {
-        width: 500px;
-      }
-      button {
-        padding: 5px 10px 5px 10px;
-        margin: 5px;
-      }
-      </style>
-    </head>
-    <body>
-      <div>
-        <span id="status-label">Click start to begin</span>
-      </div>
-      <div>
-          <button id="start-button">Start</button>
-          <button id="stop-button">Stop</button>
-      </div>
-      <script src="popup.js"></script>
-    </body>
-  </html>
+let btnStart = document.getElementById('start-button');
+let btnStop = document.getElementById('stop-button');
+let lblStatus = document.getElementById('status-label');
+
+btnStart.onclick = function(element) {
+  lblStatus.innerHTML = "Started";
+}
+
+btnStop.onclick = function(element) {
+  lblStatus.innerHTML = "Stopped";
+}
