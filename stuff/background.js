@@ -12,6 +12,10 @@ chrome.runtime.onInstalled.addListener(function() {
       actions: [new chrome.declarativeContent.ShowPageAction()]
     }]);
   });
+
+  // Init default settings into storage
+  chrome.storage.sync.set({ interval: 5000 }, null);
+
 });
 
 let timer;
@@ -22,6 +26,11 @@ let inPosition = false;
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
 
+    // Get latest settings from storage
+    chrome.storage.sync.get(null, function(data) {
+      timerInterval = parseInt(data.interval);
+    });
+    
     // Execute action
     if (request.action == "start") {
       startAutomation();
