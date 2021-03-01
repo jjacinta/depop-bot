@@ -24,8 +24,8 @@
   },
   
   "content_scripts": {
-     "matches": ["https://bitcoinhero.me/"],
-      "js": ["contentScript.js"]
+     "matches": 'bitcoinhero.me/',
+      "js": "contentScript.js"
    },
   
   "options_page": "options.html",
