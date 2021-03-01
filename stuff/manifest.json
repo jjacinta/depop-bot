@@ -21,13 +21,7 @@
      "32": "images/icon32.png",
      "48": "images/icon48.png",
      "128": "images/icon128.png"
-  },
-  
-  "content_scripts": {
-     "matches": 'bitcoinhero.me/',
-      "js": "contentScript.js"
-   },
-  
+  }, 
   "options_page": "options.html",
   "manifest_version": 2
 }
